@@ -21,10 +21,10 @@ nav.navbar.navbar-expand-lg.navbar-light {
 }
 
 a.nav-link:hover,
-a#about-dropdown:hover{
-  color:white;
-  border-radius:10px;
-  background:#3a9ddd;
+a#about-dropdown:hover {
+  color: white;
+  border-radius: 10px;
+  background: #3a9ddd;
 }
 
 .App-header {
@@ -46,6 +46,17 @@ a.nav-link {
   color: white;
   font-weight: 600;
   margin: 0.5rem 1rem;
+}
+
+button.navbar-toggler.collapsed,
+button.navbar-toggler:focus,
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled) {
+  background: white;
+  border: none;
+  outline: none;
+  padding: 5px;
+  margin: 7px;
 }
 
 .carousel-image-container {
@@ -89,6 +100,24 @@ a.nav-link {
 
 .card-title.h5 {
   margin-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+  nav.navbar.navbar-expand-lg.navbar-light{
+    padding: 0%;
+  }
+  .carousel-caption h1 {
+    font-size: 3rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.5rem;
+  }
+
+  .navbar>.container {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
 }
 
 @keyframes App-logo-spin {

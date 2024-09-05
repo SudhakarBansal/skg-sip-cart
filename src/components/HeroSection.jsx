@@ -7,7 +7,7 @@ import heroImg3 from '../assets/heroimg3.jpg';
 const HeroSection = () => {
   return (
     <section className="hero-section">
-      <Carousel controls={true} indicators={false} fade={true} interval={3000} pause={false}>
+      <Carousel controls={true} indicators={true} fade={true} interval={5000} pause={false}>
         <Carousel.Item>
           <div className="carousel-image-container">
             <img
