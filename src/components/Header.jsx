@@ -1,49 +1,127 @@
 import React, { useState } from 'react';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import logoImg from '../assets/logo.png'; // Make sure the logo path is correct
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const CustomNavbar = () => {
+  // State to track the active nav item
+  const [activeItem, setActiveItem] = useState('');
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  // Handler to set the active item
+  const handleNavClick = (item) => {
+    setActiveItem(item);
+  };
+
+  // Inline styles for active item background
+  const activeStyle = {
+    backgroundColor: '#3a9ddd',
+    color: '#fff',
+    borderRadius : '10px'
   };
 
   return (
-    <header className="bg-blue-600 p-4 flex justify-between items-center">
-      <div className="flex items-center">
-        <img src={require('../assets/logo.jpeg')} alt="Logo" className="h-10" />
-        <span className="text-white text-2xl font-bold ml-2">Conis.</span>
+    <>
+      {/* Logo Section */}
+      <div className="d-flex align-items-center justify-content-center py-3">
+        <img
+          src={logoImg}
+          alt="SKG SIP CART"
+          style={{ width: '300px' }} // Adjust the size of the logo if needed
+        />
       </div>
-      <div className="hidden md:flex space-x-4">
-        <a href="#" className="text-white">Home</a>
-        <a href="#" className="text-white">Feature</a>
-        <a href="#" className="text-white">Page</a>
-        <a href="#" className="text-white">Blog</a>
-        <a href="#" className="text-white">Contact Us</a>
-      </div>
-      <button className="bg-yellow-500 text-blue-900 font-bold py-2 px-4 rounded hidden md:block">Get a Quote</button>
-      
-      {/* Hamburger Icon for Mobile */}
-      <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-white focus:outline-none">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'}></path>
-          </svg>
-        </button>
-      </div>
-      
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-blue-600 text-white flex flex-col items-center space-y-4 md:hidden">
-          <a href="#" className="text-white">Home</a>
-          <a href="#" className="text-white">Feature</a>
-          <a href="#" className="text-white">Page</a>
-          <a href="#" className="text-white">Blog</a>
-          <a href="#" className="text-white">Contact Us</a>
-          <button className="bg-yellow-500 text-blue-900 font-bold py-2 px-4 rounded">Get a Quote</button>
-        </div>
-      )}
-    </header>
+
+      {/* Navbar Section */}
+      <Navbar expand="lg">
+        <Container>
+          <Navbar.Toggle aria-controls="navbar-nav" />
+          <Navbar.Collapse id="navbar-nav">
+            <Nav className="mx-auto">
+              <Nav.Link
+                href="#home"
+                style={activeItem === 'home' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('home')}
+              >
+                HOME
+              </Nav.Link>
+
+              <NavDropdown
+                title="ABOUT US"
+                id="about-dropdown"
+                style={activeItem === 'about' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('about')}
+              >
+                <NavDropdown.Item href="#about/company">Company</NavDropdown.Item>
+                <NavDropdown.Item href="#about/team">Team</NavDropdown.Item>
+              </NavDropdown>
+
+              <NavDropdown
+                title="OFFERINGS"
+                id="offerings-dropdown"
+                style={activeItem === 'offerings' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('offerings')}
+              >
+                <NavDropdown.Item href="#offerings/service1">Service 1</NavDropdown.Item>
+                <NavDropdown.Item href="#offerings/service2">Service 2</NavDropdown.Item>
+              </NavDropdown>
+
+              <NavDropdown
+                title="RESOURCES"
+                id="resources-dropdown"
+                style={activeItem === 'resources' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('resources')}
+              >
+                <NavDropdown.Item href="#resources/blog">Blog</NavDropdown.Item>
+                <NavDropdown.Item href="#resources/case-studies">Case Studies</NavDropdown.Item>
+              </NavDropdown>
+
+              <NavDropdown
+                title="EVENTS"
+                id="events-dropdown"
+                style={activeItem === 'events' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('events')}
+              >
+                <NavDropdown.Item href="#events/webinars">Webinars</NavDropdown.Item>
+                <NavDropdown.Item href="#events/seminars">Seminars</NavDropdown.Item>
+              </NavDropdown>
+
+              <NavDropdown
+                title="LOGIN"
+                id="login-dropdown"
+                style={activeItem === 'login' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('login')}
+              >
+                <NavDropdown.Item href="#login/signin">Sign In</NavDropdown.Item>
+                <NavDropdown.Item href="#login/register">Register</NavDropdown.Item>
+              </NavDropdown>
+
+              <Nav.Link
+                href="#downloads"
+                style={activeItem === 'downloads' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('downloads')}
+              >
+                DOWNLOADS
+              </Nav.Link>
+
+              <Nav.Link
+                href="#assistance"
+                style={activeItem === 'assistance' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('assistance')}
+              >
+                ASSISTANCE
+              </Nav.Link>
+
+              <Nav.Link
+                href="#contact"
+                style={activeItem === 'contact' ? activeStyle : {color:'white'}}
+                onClick={() => handleNavClick('contact')}
+              >
+                CONTACT US
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
   );
 };
 
-export default Header;
+export default CustomNavbar;
