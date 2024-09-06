@@ -5,7 +5,7 @@ import { ChartPie, ChartNoAxesCombined, Building2, ListMinus, HandCoins, LayoutP
 const ProductBasket = () => {
   return (
     <Container className="text-center py-5 mt-5 ">
-      <div className='d-flex align-items-center justify-content-center flex-col'>
+      <div className='d-flex align-items-center justify-content-center flex-column'>
         <h2 style={{ fontWeight: '700' }}>PRODUCT BASKET</h2>
         <div className='mb-4' style={{ width: '10%', height: '5px', backgroundColor: '#3BA3E9' }}></div>
         <p style={{ width: '70%' }}>
