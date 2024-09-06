@@ -1,34 +1,163 @@
-.App {
-  text-align: center;
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p,
+a,
+li,
+button,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
   }
 }
 
-nav.navbar.navbar-expand-lg.navbar-light {
-  z-index: 10;
-  position: absolute;
-  background-color: rgb(0, 0, 0, 0.3);
-  width: 100%;
+p.success {
+  color: green;
 }
 
-a.nav-link:hover,
-a#about-dropdown:hover {
-  color: white;
+p.danger {
+  color: red;
+}
+
+
+nav.navbar {
+  padding: 0%;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 0px 1px 7px rgb(172, 172, 172);
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+a.nav-link:hover{
+  background-color: #3a9ddd;
   border-radius: 10px;
-  background: #3a9ddd;
+  color: white !important;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+  opacity: 1;
+}
+
+span.navbar-text {
+  display: flex;
+  align-items: center;
+}
+
+
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid black;
+  transition: all 300ms linear;
+  top: -2px;
+}
+
+nav.navbar .navbar-toggler-icon:focus {
+  border-bottom: 2px solid black;
+}
+
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: black;
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: 2;
+  transition: all 300ms linear;
+}
+
+nav.navbar .navbar-toggler-icon:after {
+  top: 8px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+  height: 2px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+  height: 2px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -43,20 +172,10 @@ a#about-dropdown:hover {
 }
 
 a.nav-link {
-  color: white;
+  color: black;
   font-weight: 600;
   margin: 0.5rem 1rem;
-}
-
-button.navbar-toggler.collapsed,
-button.navbar-toggler:focus,
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled) {
-  background: white;
-  border: none;
-  outline: none;
-  padding: 5px;
-  margin: 7px;
+  padding: 10px;
 }
 
 .carousel-image-container {
@@ -104,9 +223,10 @@ button.navbar-toggler:focus,
 
 @media only screen and (max-width: 600px) {
 
-  nav.navbar.navbar-expand-lg.navbar-light{
+  nav.navbar.navbar-expand-lg.navbar-light {
     padding: 0%;
   }
+
   .carousel-caption h1 {
     font-size: 3rem;
   }
@@ -115,9 +235,6 @@ button.navbar-toggler:focus,
     font-size: 1.5rem;
   }
 
-  .navbar>.container {
-    background-color: rgba(0, 0, 0, 0.9);
-  }
 }
 
 @keyframes App-logo-spin {
