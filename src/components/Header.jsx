@@ -28,9 +28,8 @@ const CustomNavbar = () => {
 
   // Inline styles for active item background
   const activeStyle = {
-    backgroundColor: '#3a9ddd',
-    color: '#fff',
-    borderRadius: '10px',
+    color: '#1455a6',
+    fontWeight : '700'
   };
 
   return (
@@ -54,7 +53,7 @@ const CustomNavbar = () => {
             <Nav className="ms-auto" id="nav-links">
               <Nav.Link
                 href="#home"
-                style={activeItem === 'home' ? activeStyle : { color: 'black' }}
+                style={activeItem === 'home' ? activeStyle : { color: '#383838' }}
                 onClick={() => handleNavClick('home')}
               >
                 HOME
@@ -63,30 +62,30 @@ const CustomNavbar = () => {
               <Nav.Link
                 href="#about"
                 id="about"
-                style={activeItem === 'about' ? activeStyle : { color: 'black' }}
+                style={activeItem === 'about' ? activeStyle : {}}
                 onClick={() => handleNavClick('about')}
               >
                 ABOUT US
               </Nav.Link>
 
-              <NavDropdown title="OFFERINGS" id="offerings-dropdown" style={{ color: 'black' }}>
+              <NavDropdown title="OFFERINGS" id="offerings-dropdown">
                 <NavDropdown.Item href="#offerings/service1">Service 1</NavDropdown.Item>
                 <NavDropdown.Item href="#offerings/service2">Service 2</NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="RESOURCES" id="resources-dropdown" style={{ color: 'black' }}>
+              <NavDropdown title="RESOURCES" id="resources-dropdown">
                 <NavDropdown.Item href="#resources/blog">Blog</NavDropdown.Item>
                 <NavDropdown.Item href="#resources/case-studies">Case Studies</NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="LOGIN" id="login-dropdown" style={{ color: 'black' }}>
+              <NavDropdown title="LOGIN" id="login-dropdown">
                 <NavDropdown.Item href="#login/signin">Sign In</NavDropdown.Item>
                 <NavDropdown.Item href="#login/register">Register</NavDropdown.Item>
               </NavDropdown>
 
               <Nav.Link
                 href="#contact"
-                style={activeItem === 'contact' ? activeStyle : { color: 'black' }}
+                style={activeItem === 'contact' ? activeStyle : {}}
                 onClick={() => handleNavClick('contact')}
               >
                 CONTACT US

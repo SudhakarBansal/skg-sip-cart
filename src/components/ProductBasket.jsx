@@ -4,11 +4,11 @@ import { ChartPie, ChartNoAxesCombined, Building2, ListMinus, HandCoins, LayoutP
 
 const ProductBasket = () => {
   return (
-    <Container className="text-center py-5 mt-5 ">
+    <Container className="text-center py-5 mt-5" style={{color:'#383838'}}>
       <div className='d-flex align-items-center justify-content-center flex-column'>
-        <h2 style={{ fontWeight: '700' }}>PRODUCT BASKET</h2>
-        <div className='mb-4' style={{ width: '10%', height: '5px', backgroundColor: '#3BA3E9' }}></div>
-        <p style={{ width: '70%' }}>
+        <h2 style={{ fontWeight: '700'}}>PRODUCT BASKET</h2>
+        <div className='mb-4 underline-div'></div>
+        <p className='lh-base'>
           If you are looking for the right financial product, you are at the right place.
           Starting from mutual funds to insurance and from real estate to other financial
           products, we have them all. You can select your financial investment products
