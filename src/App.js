@@ -1,22 +1,22 @@
 import React from 'react';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import ProductBasket from './components/ProductBasket';
-import BuisnessIntroduction from './components/BuisnessIntroduction';
-import WhatWeOffer from './components/FinancialServicesOffer';
-import Footer from './components/Footer';
+import Layout from './components/Layout/Layout';
+import HomePage from './components/Pages/HomePage';
+import AboutPage from './components/Pages/AboutPage';
+import ContactUs from './components/Pages/ContactUs';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <HeroSection />
-      <ProductBasket/>
-      <BuisnessIntroduction/>
-      <WhatWeOffer/>
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactUs />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

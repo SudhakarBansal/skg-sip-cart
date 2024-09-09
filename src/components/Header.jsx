@@ -1,48 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 import logoImg from '../assets/logo.png'; // Make sure the logo path is correct
 
-const CustomNavbar = () => {
-  // State to track the active nav item
-  const [activeItem, setActiveItem] = useState('');
-
-  useEffect(() => {
-    // Set the active item based on the current URL hash when the component mounts
-    const setActiveFromHash = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        const item = hash.substring(1); // Remove the '#' from the hash
-        setActiveItem(item);
-      } else {
-        setActiveItem('home'); // Default to 'home' if no hash is present
-      }
-    };
-
-    setActiveFromHash(); // Call this when component mounts
-  }, []);
-
-  // Handler to set the active item
-  const handleNavClick = (item) => {
-    setActiveItem(item);
-  };
-
-  // Inline styles for active item background
-  const activeStyle = {
-    color: '#1455a6',
-    fontWeight : '700'
-  };
+const Header = () => {
 
   return (
     <>
       {/* Navbar Section */}
       <Navbar expand="lg">
-        <Container >
-          <Navbar.Brand href="#home">
+        <Container>
+          <Navbar.Brand as={Link} to="/">
             <img
               src={logoImg}
               width="150"
               alt="LOGO"
-              className={`d-inline-block align-top logo`}
+              className="d-inline-block align-top logo"
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="custom-toggler">
@@ -52,41 +25,49 @@ const CustomNavbar = () => {
           <Navbar.Collapse id="navbar-nav">
             <Nav className="ms-auto" id="nav-links">
               <Nav.Link
-                href="#home"
-                style={activeItem === 'home' ? activeStyle : { color: '#383838' }}
-                onClick={() => handleNavClick('home')}
+                as={NavLink}
+                to="/"
               >
                 HOME
               </Nav.Link>
 
               <Nav.Link
-                href="#about"
-                id="about"
-                style={activeItem === 'about' ? activeStyle : {}}
-                onClick={() => handleNavClick('about')}
+                as={NavLink}
+                to="/about"
               >
                 ABOUT US
               </Nav.Link>
 
               <NavDropdown title="OFFERINGS" id="offerings-dropdown">
-                <NavDropdown.Item href="#offerings/service1">Service 1</NavDropdown.Item>
-                <NavDropdown.Item href="#offerings/service2">Service 2</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/offerings/service1">
+                  Service 1
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/offerings/service2">
+                  Service 2
+                </NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="RESOURCES" id="resources-dropdown">
-                <NavDropdown.Item href="#resources/blog">Blog</NavDropdown.Item>
-                <NavDropdown.Item href="#resources/case-studies">Case Studies</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/resources/blog">
+                  Blog
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/resources/case-studies">
+                  Case Studies
+                </NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="LOGIN" id="login-dropdown">
-                <NavDropdown.Item href="#login/signin">Sign In</NavDropdown.Item>
-                <NavDropdown.Item href="#login/register">Register</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/login/signin">
+                  Sign In
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/login/register">
+                  Register
+                </NavDropdown.Item>
               </NavDropdown>
 
               <Nav.Link
-                href="#contact"
-                style={activeItem === 'contact' ? activeStyle : {}}
-                onClick={() => handleNavClick('contact')}
+                as={NavLink}
+                to="/contact"
               >
                 CONTACT US
               </Nav.Link>
@@ -98,4 +79,4 @@ const CustomNavbar = () => {
   );
 };
 
-export default CustomNavbar;
+export default Header;

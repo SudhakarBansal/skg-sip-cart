@@ -3,7 +3,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FaClipboardList, FaCogs, FaChartLine } from 'react-icons/fa';  
 import offerImg from '../assets/weOffer.png'
 
-const WhatWeOffer = () => {
+const FinancialServicesOffer = () => {
   return (
     <Container fluid className="p-5">
       <Row className="align-items-center">
@@ -61,4 +61,4 @@ const WhatWeOffer = () => {
   );
 };
 
-export default WhatWeOffer;
+export default FinancialServicesOffer;

@@ -57,6 +57,12 @@ select:focus {
   outline: none;
 }
 
+
+a.nav-link.active {
+  color: #007bff !important;
+  font-weight: 800;
+}
+
 @media (min-width:1700px) {
   main .container {
     max-width: 100%;
@@ -234,6 +240,11 @@ p.lh-base {
   margin-top: 1rem;
 }
 
+
+.about-container-text{
+  width: 80%;
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .col-md-6 {
     width: 100% !important;
@@ -247,6 +258,7 @@ p.lh-base {
   img.img-fluid {
     width: 100%;
   }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -292,6 +304,14 @@ p.lh-base {
   #my-2{
     margin-top: 2rem;
   }
+
+  .text-center.achievements.row {
+    flex-direction: column;
+}
+
+.achievements>.col{
+  margin-bottom: 1rem;
+}
 
 }
 
