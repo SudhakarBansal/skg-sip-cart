@@ -6,7 +6,7 @@ import ContactUsImg from '../../assets/ContactUs.png'
 const ContactUs = () => {
   return (
     <>
-      <img src={ContactUsImg} alt="SKG SIP CART" style={{ width: '100%', minHeight: '45vh', objectFit: 'cover' }} />
+      <img src={ContactUsImg} alt="SKG SIP CART" style={{ width: '100%', minHeight: '35vh', objectFit: 'cover' }} />
       <Container className="p-5">
         <Row className="align-items-center justify-content-around my-5">
           <Col md={5}>
