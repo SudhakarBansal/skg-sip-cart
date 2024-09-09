@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import logoImg from '../assets/logo.png'; // Make sure the logo path is correct
 
 const Header = () => {
+  // State to control navbar expand/collapse
+  const [expanded, setExpanded] = useState(false);
+
+  // Handler to collapse the navbar after a link is clicked
+  const handleNavClick = () => {
+    setExpanded(false); // Close the navbar
+  };
 
   return (
     <>
       {/* Navbar Section */}
-      <Navbar expand="lg">
+      <Navbar expand="lg" expanded={expanded}>
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={Link} to="/" onClick={handleNavClick}>
             <img
               src={logoImg}
               width="150"
@@ -18,7 +25,11 @@ const Header = () => {
               className="d-inline-block align-top logo"
             />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="custom-toggler">
+          <Navbar.Toggle 
+            aria-controls="basic-navbar-nav" 
+            className="custom-toggler" 
+            onClick={() => setExpanded(expanded ? false : true)} // Toggle navbar expand/collapse
+          >
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
 
@@ -27,6 +38,7 @@ const Header = () => {
               <Nav.Link
                 as={NavLink}
                 to="/"
+                onClick={handleNavClick} // Collapse after clicking
               >
                 HOME
               </Nav.Link>
@@ -34,33 +46,34 @@ const Header = () => {
               <Nav.Link
                 as={NavLink}
                 to="/about"
+                onClick={handleNavClick} // Collapse after clicking
               >
                 ABOUT US
               </Nav.Link>
 
               <NavDropdown title="OFFERINGS" id="offerings-dropdown">
-                <NavDropdown.Item as={Link} to="/offerings/service1">
+                <NavDropdown.Item as={Link} to="/offerings/service1" onClick={handleNavClick}>
                   Service 1
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/offerings/service2">
+                <NavDropdown.Item as={Link} to="/offerings/service2" onClick={handleNavClick}>
                   Service 2
                 </NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="RESOURCES" id="resources-dropdown">
-                <NavDropdown.Item as={Link} to="/resources/blog">
+                <NavDropdown.Item as={Link} to="/resources/blog" onClick={handleNavClick}>
                   Blog
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/resources/case-studies">
+                <NavDropdown.Item as={Link} to="/resources/case-studies" onClick={handleNavClick}>
                   Case Studies
                 </NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="LOGIN" id="login-dropdown">
-                <NavDropdown.Item as={Link} to="/login/signin">
+                <NavDropdown.Item as={Link} to="/login/signin" onClick={handleNavClick}>
                   Sign In
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/login/register">
+                <NavDropdown.Item as={Link} to="/login/register" onClick={handleNavClick}>
                   Register
                 </NavDropdown.Item>
               </NavDropdown>
@@ -68,10 +81,11 @@ const Header = () => {
               <Nav.Link
                 as={NavLink}
                 to="/contact"
+                onClick={handleNavClick} // Collapse after clicking
               >
                 CONTACT US
               </Nav.Link>
-            </Nav>
+            </Nav>  
           </Navbar.Collapse>
         </Container>
       </Navbar>

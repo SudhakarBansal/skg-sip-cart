@@ -5,10 +5,12 @@ import Layout from './components/Layout/Layout';
 import HomePage from './components/Pages/HomePage';
 import AboutPage from './components/Pages/AboutPage';
 import ContactUs from './components/Pages/ContactUs';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
