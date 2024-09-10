@@ -3,6 +3,7 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import logoImg from '../assets/logo.png';
 import { FaFacebookF, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 import { CgMail } from "react-icons/cg";
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
 
@@ -17,16 +18,16 @@ const Footer = () => {
           </div>
 
           <div>
-            <a href="https://www.facebook.com/people/SKG-SIP-CART/100063640616719/" className="me-4 text-reset" aria-label="Facebook">
+            <a href="https://www.facebook.com/people/SKG-SIP-CART/100063640616719/" className="me-4 text-reset" aria-label="Facebook" title='Facebook'>
               <FaFacebookF />
             </a>
-            <a href="https://www.youtube.com/@skgsipcart" className="me-4 text-reset" aria-label="YouTube">
+            <a href="https://www.youtube.com/@skgsipcart" className="me-4 text-reset" aria-label="YouTube" title='YouTube'>
               <FaYoutube />
             </a>
-            <a href="mailto:Skgsipcart@gmail.com" className="me-4 text-reset" aria-label="Email">
+            <a href="mailto:Skgsipcart@gmail.com" className="me-4 text-reset" aria-label="Email" title='Gmail'>
               <CgMail />
             </a>
-            <a href="https://wa.me/917710347319?text=Hi%20Sir!" className="me-4 text-reset" aria-label="WhatsApp">
+            <a href="https://wa.me/917710347319?text=Hi%20Sir!" className="me-4 text-reset" aria-label="WhatsApp" title='Whatsapp'>
               <FaWhatsapp />
             </a>
           </div>
@@ -90,18 +91,14 @@ const Footer = () => {
               <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
-                  <FaFacebookF className="me-2" aria-hidden="true" />
-                  New York, NY 10012, US
+                  <FaLocationDot className="me-2" aria-hidden="true" />
+                  118 FIRST FLOOR AGGARWAL E MALL SECTOR 7 ROHINI DELHI 110085, Delhi, India, Delhi
                 </p>
                 <p>
-                  <FaYoutube className="me-3" aria-hidden="true" />
-                  info@example.com
+                  <CgMail className="me-3" aria-hidden="true" /> Skgsipcart@gmail.com
                 </p>
                 <p>
-                  <CgMail className="me-3" aria-hidden="true" /> + 01 234 567 88
-                </p>
-                <p>
-                  <FaWhatsapp className="me-3" aria-hidden="true" /> + 01 234 567 89
+                  <FaWhatsapp className="me-3" aria-hidden="true" /> +(91) 98714 84948
                 </p>
               </MDBCol>
             </MDBRow>

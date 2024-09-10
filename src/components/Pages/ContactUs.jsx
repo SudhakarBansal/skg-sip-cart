@@ -15,15 +15,14 @@ const ContactUs = () => {
 
             <h3 style={{ fontWeight: '700', marginTop: '20px' }}>Our Office</h3>
             <p>
-              123, Financial Avenue, Delhi NCR, India<br />
-              Telephone: +91 98765 43210<br />
-              E-mail: info@skg-sip-cart.com
+              118 FIRST FLOOR AGGARWAL E MALL SECTOR 7 ROHINI DELHI 110085, India<br />
+              Telephone: +(91) 98714 84948<br />
+              E-mail: Skgsipcart@gmail.com
             </p>
 
             <h3 style={{ fontWeight: '700', marginTop: '20px' }}>Working Hours</h3>
             <p>
-              Monday to Friday: 9:00 AM - 6:00 PM<br />
-              Saturday: 10:00 AM - 4:00 PM<br />
+              Monday to Saturday: 10:00 AM - 4:00 PM<br />
               Sunday: Closed
             </p>
           </Col>
