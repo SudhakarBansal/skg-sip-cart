@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import ContactUsImg from '../../assets/ContactUs.png'
-
-
+import ContactUsImg from '../../assets/ContactUs.webp'
 const ContactUs = () => {
   return (
     <>

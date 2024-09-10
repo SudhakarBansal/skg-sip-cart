@@ -1,6 +1,6 @@
 import React from 'react'
 import FinancialServicesOffer from '../FinancialServicesOffer'
-import AboutUsImg from '../../assets/AboutUs.png'
+import AboutUsImg from '../../assets/AboutUs.webp'
 import Achievements from '../Achievements'
 
 const AboutPage = () => {

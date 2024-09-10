@@ -95,10 +95,10 @@ const Footer = () => {
                   118 FIRST FLOOR AGGARWAL E MALL SECTOR 7 ROHINI DELHI 110085, Delhi, India, Delhi
                 </p>
                 <p>
-                  <CgMail className="me-3" aria-hidden="true" /> Skgsipcart@gmail.com
+                  <CgMail className="me-3" aria-hidden="true" />Skgsipcart@gmail.com
                 </p>
                 <p>
-                  <FaWhatsapp className="me-3" aria-hidden="true" /> +(91) 98714 84948
+                  <FaWhatsapp className="me-3" aria-hidden="true" />+(91) 98714 84948
                 </p>
               </MDBCol>
             </MDBRow>

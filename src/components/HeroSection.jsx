@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import heroImg1 from '../assets/finance-635805_1280.jpg'; 
-import heroImg2 from '../assets/heroimg2.jpg';
-import heroImg3 from '../assets/heroimg3.jpg';
+import heroImg1 from '../assets/finance-635805_1280.webp'; 
+import heroImg2 from '../assets/heroimg2.webp';
+import heroImg3 from '../assets/heroimg3.webp';
 
 const HeroSection = () => {
   return (

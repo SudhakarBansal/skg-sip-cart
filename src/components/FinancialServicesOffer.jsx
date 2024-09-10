@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FaClipboardList, FaCogs, FaChartLine } from 'react-icons/fa';  
-import offerImg from '../assets/weOffer.png'
+import offerImg from '../assets/weOffer.webp'
 
 const FinancialServicesOffer = () => {
   return (

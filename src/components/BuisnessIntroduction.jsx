@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import teamImg from '../assets/team.jpg'
+import teamImg from '../assets/team.webp'
 
 const BuisnessIntroduction = () => {
   return (
