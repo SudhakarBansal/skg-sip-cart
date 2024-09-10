@@ -1,9 +1,13 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import logoImg from '../assets/logo.png'; 
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa'; 
+import logoImg from '../assets/logo.png';
+import { FaFacebookF, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import { CgMail } from "react-icons/cg";
 
 const Footer = () => {
+
+  const copyrightTimeStamp = new Date().getFullYear();
+
   return (
     <>
       <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
@@ -13,20 +17,17 @@ const Footer = () => {
           </div>
 
           <div>
-            <a href="/" className="me-4 text-reset">
+            <a href="https://www.facebook.com/people/SKG-SIP-CART/100063640616719/" className="me-4 text-reset" aria-label="Facebook">
               <FaFacebookF />
             </a>
-            <a href="/" className="me-4 text-reset">
-              <FaTwitter /> 
+            <a href="https://www.youtube.com/@skgsipcart" className="me-4 text-reset" aria-label="YouTube">
+              <FaYoutube />
             </a>
-            <a href="/" className="me-4 text-reset">
-              <FaInstagram />
+            <a href="mailto:Skgsipcart@gmail.com" className="me-4 text-reset" aria-label="Email">
+              <CgMail />
             </a>
-            <a href="/" className="me-4 text-reset">
-              <FaLinkedin />
-            </a>
-            <a href="/" className="me-4 text-reset">
-              <FaGithub /> 
+            <a href="https://wa.me/917710347319?text=Hi%20Sir!" className="me-4 text-reset" aria-label="WhatsApp">
+              <FaWhatsapp />
             </a>
           </div>
         </section>
@@ -34,8 +35,8 @@ const Footer = () => {
         <section className="">
           <MDBContainer className="text-center text-md-start mt-5">
             <MDBRow className="mt-3">
-              <MDBCol md="3" lg="4" xl="3" className="mx-auto m-auto">
-                <img src={logoImg} alt="Skg-Sip_cart" className='logoimg' style={{width:'100%'}}/>
+              <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
+                <img src={logoImg} alt="Skg Sip Cart Logo" className='logoimg' style={{ width: '100%', maxWidth: '200px' }} />
               </MDBCol>
 
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
@@ -89,18 +90,18 @@ const Footer = () => {
               <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
-                  <FaFacebookF className="me-2" />
+                  <FaFacebookF className="me-2" aria-hidden="true" />
                   New York, NY 10012, US
                 </p>
                 <p>
-                  <FaTwitter className="me-3" />
+                  <FaYoutube className="me-3" aria-hidden="true" />
                   info@example.com
                 </p>
                 <p>
-                  <FaInstagram className="me-3" /> + 01 234 567 88
+                  <CgMail className="me-3" aria-hidden="true" /> + 01 234 567 88
                 </p>
                 <p>
-                  <FaLinkedin className="me-3" /> + 01 234 567 89
+                  <FaWhatsapp className="me-3" aria-hidden="true" /> + 01 234 567 89
                 </p>
               </MDBCol>
             </MDBRow>
@@ -108,10 +109,11 @@ const Footer = () => {
         </section>
 
         <div className="text-center p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-          © 2021 Copyright:
-          <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-            MDBootstrap.com
+          © {copyrightTimeStamp} Copyright &nbsp;
+          <a className="text-reset fw-bold" href="https://skgsipcart.com/">
+            skgsipcart.com
           </a>
+          &nbsp; | All Rights Reserved.
         </div>
       </MDBFooter>
     </>

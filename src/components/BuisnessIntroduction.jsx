@@ -14,7 +14,7 @@ const BuisnessIntroduction = () => {
           />
         </Col>
         <Col md={6} className="px-5">
-          <h2 style={{ fontWeight: '700'}}>Welcome To Skg-Sip-Cart</h2>
+          <h2 style={{ fontWeight: '700'}}>Welcome To Skg Sip Cart</h2>
           <p>
             We are a leading personal financial advisory firm guiding investors to realise their dreams by planning and managing their wealth since 2004. Serving 2500+ investors across the Delhi NCR, we believe every client is special. Therefore, our team of qualified and experienced professionals talks to you and makes sure that our solutions are designed to match your specific dreams and goals.
           </p>
