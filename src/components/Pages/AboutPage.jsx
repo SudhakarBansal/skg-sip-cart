@@ -6,7 +6,7 @@ import Achievements from '../Achievements'
 const AboutPage = () => {
   return (
     <>
-        <img src={AboutUsImg} alt="SKG SIP CART" style={{width:'100%', minHeight:'45vh', objectFit:'cover'}} />
+        <img src={AboutUsImg} loading='lazy' alt="SKG SIP CART" style={{width:'100%', minHeight:'45vh', objectFit:'cover'}} />
       <div className='container d-flex align-items-center flex-column mb-5'>
         <h2 className='text-center mt-5' style={{ fontWeight: '700' }}>
           WELCOME TO SKG SIP CART

@@ -9,6 +9,7 @@ const BuisnessIntroduction = () => {
         <Col md={6}>
           <img
             src={teamImg}
+            loading='lazy'
             alt="Business Meeting"
             className="img-fluid"
           />
