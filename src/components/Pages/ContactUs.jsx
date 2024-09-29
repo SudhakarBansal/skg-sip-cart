@@ -1,7 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import ContactUsImg from "../../assets/ContactUs.webp";
 import emailjs from "@emailjs/browser"; // Import updated EmailJS SDK
+
+
+
+useEffect(()=>{
+  console.log(
+    process.env.REACT_APP_EMAILJS_SERVICE_ID,
+    process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+    process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+  );  
+},[])
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
