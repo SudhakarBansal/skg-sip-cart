@@ -52,6 +52,7 @@ const FinancialServicesOffer = () => {
         <Col md={6}>
           <Image
             src={offerImg} // Replace with actual image path
+            loading='lazy'
             alt="Business Discussion"
             className="img-fluid"
           />
