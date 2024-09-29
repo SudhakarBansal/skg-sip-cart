@@ -7,6 +7,7 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "", // New phone number field
     message: "",
   });
 
@@ -21,49 +22,66 @@ const ContactUs = () => {
     });
   };
 
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ // Handle form submission
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      alert("All fields are required.");
-      setisDisable(false);
-      return;
-    }
+  // Basic validation
+  if (!formData.name || !formData.email || !formData.message) {
+    alert("All fields except phone are required.");
+    setisDisable(false);
+    return;
+  }
 
-    // Email format validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(formData.email)) {
-      alert("Please enter a valid email address.");
-      setisDisable(false);
-      return;
-    }
+  // Email format validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(formData.email)) {
+    alert("Please enter a valid email address.");
+    setisDisable(false);
+    return;
+  }
 
-    setisDisable(true);
+  // Phone number validation (optional, but if entered, must be 10 digits)
+  const phonePattern = /^[0-9]{10}$/;
+  if (formData.phone && !phonePattern.test(formData.phone)) {
+    alert("Please enter a valid 10-digit phone number.");
+    setisDisable(false);
+    return;
+  }
 
-    try {
-      // Send form using EmailJS
-      await emailjs.sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID, // Use environment variables
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        e.target,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      );
-      alert("Message sent successfully!");
-      // Reset form data
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {
-      alert("Failed to send the message. Please try again later.");
-      console.log("EmailJS Error:", error);
-    } finally {
-      setisDisable(false); // Re-enable form after completion
-    }
+  // Set default phone number if not provided
+  const updatedFormData = {
+    ...formData,
+    phone: formData.phone ==="" ?( "Not entered by user"):formData.phone // Default phone number if not provided
   };
+
+  setisDisable(true);
+
+  try {
+    // Send form using EmailJS with updatedFormData
+    await emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID, // Use environment variables
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      updatedFormData,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    );
+
+    alert("Message sent successfully!");
+
+    // Reset form data
+    setFormData({
+      name: "",
+      email: "",
+      phone: "", // Reset phone number
+      message: "",
+    });
+  } catch (error) {
+    alert("Failed to send the message. Please try again later.");
+    console.log("EmailJS Error:", error);
+  } finally {
+    setisDisable(false); // Re-enable form after completion
+  }
+};
 
   return (
     <>
@@ -132,6 +150,17 @@ const ContactUs = () => {
                 />
               </Form.Group>
 
+              <Form.Group className="mb-3" controlId="formPhone">
+                <Form.Control
+                  type="tel" // Change input type to tel for phone numbers
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Phone Number (Optional)"
+                  style={{ height: "50px", fontSize: "16px" }}
+                />
+              </Form.Group>
+
               <Form.Group className="mb-3" controlId="formMessage">
                 <Form.Control
                   as="textarea"
@@ -159,7 +188,7 @@ const ContactUs = () => {
                   type="reset"
                   style={{ padding: "10px 30px", fontSize: "16px" }}
                   onClick={() => {
-                    setFormData({ name: "", email: "", message: "" });
+                    setFormData({ name: "", email: "", phone: "", message: "" });
                     setisDisable(false); // Re-enable form if reset
                   }}
                 >

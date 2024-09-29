@@ -13,7 +13,6 @@ const HeroSection = () => {
             <img
               className="d-block w-100"
               src={heroImg1}
-              loading='lazy'
               alt="First slide"
               style={{ height: '600px', objectFit: 'cover' }}
             />
@@ -30,7 +29,6 @@ const HeroSection = () => {
             <img
               className="d-block w-100"
               src={heroImg2}
-              loading='lazy'
               alt="Second slide"
               style={{ height: '600px', objectFit: 'cover' }}
             />
@@ -46,7 +44,6 @@ const HeroSection = () => {
           <div className="carousel-image-container">
             <img
               className="d-block w-100"
-              loading='lazy'
               src={heroImg3}
               alt="Third slide"
               style={{ height: '600px', objectFit: 'cover' }}
