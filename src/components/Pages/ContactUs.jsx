@@ -5,14 +5,6 @@ import emailjs from "@emailjs/browser"; // Import updated EmailJS SDK
 
 
 
-useEffect(()=>{
-  console.log(
-    process.env.REACT_APP_EMAILJS_SERVICE_ID,
-    process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-    process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-  );  
-},[])
-
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,6 +12,15 @@ const ContactUs = () => {
     phone: "", // New phone number field
     message: "",
   });
+
+
+  useEffect(()=>{
+    console.log(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    );  
+  },[])
 
   const [isDisable, setisDisable] = useState(false);
 
@@ -94,6 +95,7 @@ const handleSubmit = async (e) => {
 };
 
   return (
+    
     <>
       <img
         src={ContactUsImg}
