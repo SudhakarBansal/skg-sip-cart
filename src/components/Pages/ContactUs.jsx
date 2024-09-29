@@ -13,15 +13,6 @@ const ContactUs = () => {
     message: "",
   });
 
-
-  useEffect(()=>{
-    console.log(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    );  
-  },[])
-
   const [isDisable, setisDisable] = useState(false);
 
   // Handle input changes
