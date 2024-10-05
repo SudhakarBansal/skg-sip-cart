@@ -27,18 +27,15 @@ h6 {
   line-height: normal;
 }
 
-p,
 a,
-li,
-button,
-ul {
+button {
   margin: 0;
   padding: 0;
   line-height: normal;
   text-decoration: none;
 }
 
-p {
+p,li {
   line-height: 160%;
 }
 
