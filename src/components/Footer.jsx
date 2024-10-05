@@ -129,8 +129,8 @@ const Footer = () => {
                   </a>
                 </p>
                 <p>
-                  <a href="/" className="text-reset">
-                    Orders
+                  <a href="https://ewa.njindiaonline.com/ewa/login" target="_blank" className="text-reset">
+                    Login
                   </a>
                 </p>
                 <p>
