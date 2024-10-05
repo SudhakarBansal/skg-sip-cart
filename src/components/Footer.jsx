@@ -95,22 +95,22 @@ const Footer = () => {
                 <h6 className="text-uppercase fw-bold mb-4">Products</h6>
                 <p>
                   <a href="/" className="text-reset">
-                    Angular
+                    Product 1
                   </a>
                 </p>
                 <p>
                   <a href="/" className="text-reset">
-                    React
+                  Product 2
                   </a>
                 </p>
                 <p>
                   <a href="/" className="text-reset">
-                    Vue
+                  Product 3
                   </a>
                 </p>
                 <p>
                   <a href="/" className="text-reset">
-                    Laravel
+                  Product 4
                   </a>
                 </p>
               </MDBCol>
@@ -119,12 +119,13 @@ const Footer = () => {
                 <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                 <p>
                   <a href="/" className="text-reset">
-                    Pricing
+                    {/* Pricing */}
+                    Home
                   </a>
                 </p>
                 <p>
-                  <a href="/" className="text-reset">
-                    Settings
+                  <a href="/about" className="text-reset">
+                    About Us
                   </a>
                 </p>
                 <p>
@@ -133,8 +134,8 @@ const Footer = () => {
                   </a>
                 </p>
                 <p>
-                  <a href="/" className="text-reset">
-                    Help
+                  <a href="/contact" className="text-reset">
+                    Contact Us
                   </a>
                 </p>
               </MDBCol>
