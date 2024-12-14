@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import logoImg from "../assets/logo.png"; // Make sure the logo path is correct
 
