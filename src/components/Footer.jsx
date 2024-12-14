@@ -56,7 +56,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/917710347319?text=Hi%20Sir!"
+              href="https://wa.me/9871484948?text=Hi%20Sir!"
               className="me-4 text-reset"
               target="_blank"
               aria-label="WhatsApp"

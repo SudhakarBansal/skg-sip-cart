@@ -43,7 +43,7 @@ const ProductBasket = () => {
   ];
 
   return (
-    <Container className="py-5 mt-5">
+    <Container fluid className="py-5" style={{ backgroundColor: '#f6f6f6' }}>
       <Row className="text-center mb-4">
         <Col>
           <h2 style={{ fontWeight: '700' }}>Our Product Basket</h2>
@@ -56,7 +56,7 @@ const ProductBasket = () => {
       <Row>
         {products.map((product, index) => (
           <Col md={4} sm={6} xs={12} className="mb-4" key={index}>
-            <Card className="h-100 text-center border-1">
+            <Card className="h-100 text-center border-0 shadow">
               <Card.Body>
                 <div className="mb-3">{product.icon}</div>
                 <Card.Title className="mb-2" style={{ fontWeight: '600' }}>

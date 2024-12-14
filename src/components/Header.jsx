@@ -52,39 +52,14 @@ const Header = () => {
                 ABOUT US
               </Nav.Link>
 
-              <NavDropdown title="OFFERINGS" id="offerings-dropdown">
-                <NavDropdown.Item
-                  as={Link}
-                  to="/offerings/service1"
-                  onClick={handleNavClick}
-                >
-                  Service 1
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={Link}
-                  to="/offerings/service2"
-                  onClick={handleNavClick}
-                >
-                  Service 2
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link
+                as={NavLink}
+                to="/product-basket"
+                onClick={handleNavClick} // Collapse after clicking
+              >
+                PRODUCT BASKET
+              </Nav.Link>
 
-              <NavDropdown title="RESOURCES" id="resources-dropdown">
-                <NavDropdown.Item
-                  as={Link}
-                  to="/resources/blog"
-                  onClick={handleNavClick}
-                >
-                  Blog
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={Link}
-                  to="/resources/case-studies"
-                  onClick={handleNavClick}
-                >
-                  Case Studies
-                </NavDropdown.Item>
-              </NavDropdown>
               <Nav.Link
                 as={NavLink}
                 to="/contact"

@@ -6,6 +6,7 @@ import HomePage from './components/Pages/HomePage';
 import AboutPage from './components/Pages/AboutPage';
 import ContactUs from './components/Pages/ContactUs';
 import ScrollToTop from './components/ScrollToTop';
+import ProductBasket from './components/Pages/ProductBasket';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactUs />} />
+          <Route path="product-basket" element={<ProductBasket/>} />
         </Route>
       </Routes>
     </Router>
