@@ -1,75 +1,54 @@
-import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FaChartPie, FaBriefcase, FaDollarSign, FaBalanceScale, FaChartLine, FaUniversity } from 'react-icons/fa';
+import React from "react";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import mutualFundImg from "../../assets/mutual-funds.webp";
+import FundTypesSection from "../FundTypesSection";
 
-const ProductBasket = () => {
-  const products = [
-    {
-      title: 'Mutual Funds',
-      description:
-        'Professionally managed investment funds pooling money from investors to purchase securities. These provide diversification, liquidity, and professional management.',
-      icon: <FaChartPie size={40} className="text-primary" />,
-    },
-    {
-      title: 'Equity Funds',
-      description:
-        'Collective investment schemes focusing on investments in various equity securities using private equity strategies.',
-      icon: <FaBriefcase size={40} className="text-success" />,
-    },
-    {
-      title: 'Debt Funds',
-      description:
-        'Investment pools focusing on fixed-income investments like bonds, offering consistent returns with lower risk.',
-      icon: <FaDollarSign size={40} className="text-warning" />,
-    },
-    {
-      title: 'Balanced Funds',
-      description:
-        'Mutual funds containing a mix of stocks, bonds, and sometimes money market instruments to balance risk and return.',
-      icon: <FaBalanceScale size={40} className="text-info" />,
-    },
-    {
-      title: 'Small Cap Funds',
-      description:
-        'Investments in small-cap category stocks, excluding the largest 250 stocks, providing high-growth potential.',
-      icon: <FaChartLine size={40} className="text-danger" />,
-    },
-    {
-      title: 'Large Cap Funds',
-      description:
-        'Investments in the largest 100 stocks by market capitalization, offering stability and consistent returns.',
-      icon: <FaUniversity size={40} className="text-dark" />,
-    },
-  ];
-
+const MutualFundsSection = () => {
   return (
-    <Container fluid className="py-5" style={{ backgroundColor: '#f6f6f6' }}>
-      <Row className="text-center mb-4">
-        <Col>
-          <h2 style={{ fontWeight: '700' }}>Our Product Basket</h2>
+    <Container className="py-5">
+      <Row className="align-items-center my-5">
+        {/* Image Section */}
+        <Col md={5}>
+          <Image
+            src={mutualFundImg}
+            alt="Mutual Funds"
+            fluid
+            loading="lazy"
+            className="rounded mb-3"
+            style={{ height: "400px", objectFit: "cover" }}
+          />
+        </Col>
+
+        {/* Text Section */}
+        <Col md={7} className="px-4">
+          <div className="d-flex justify-content-center flex-column">
+            <h2 style={{ fontWeight: "700" }}>Mutual Funds</h2>
+            <div className="mb-4 underline-div"></div>
+          </div>
           <p>
-            Explore a variety of financial products designed to cater to your
-            diverse investment needs and goals.
+            A mutual fund is a professionally managed investment vehicle that
+            collects funds from multiple investors to purchase securities. These
+            investors can be individuals or institutions.{" "}
+          </p>
+          <p>
+            Mutual funds offer both benefits and drawbacks compared to directly
+            investing in individual securities. The key benefits include
+            economies of scale, greater diversification, enhanced liquidity, and
+            professional management of investments. However, investors may also
+            incur various fees and expenses.
+          </p>
+          <p>
+            Mutual funds come in different forms, such as open-end funds, unit
+            investment trusts, and closed-end funds. Exchange-traded funds
+            (ETFs), a type of open-end fund or unit investment trust, are traded
+            on exchanges. Similarly, some closed-end funds function like ETFs as
+            they are also traded on stock exchanges, enhancing their liquidity.{" "}
           </p>
         </Col>
       </Row>
-      <Row>
-        {products.map((product, index) => (
-          <Col md={4} sm={6} xs={12} className="mb-4" key={index}>
-            <Card className="h-100 text-center border-0 shadow">
-              <Card.Body>
-                <div className="mb-3">{product.icon}</div>
-                <Card.Title className="mb-2" style={{ fontWeight: '600' }}>
-                  {product.title}
-                </Card.Title>
-                <Card.Text>{product.description}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+      <FundTypesSection/>
     </Container>
   );
 };
 
-export default ProductBasket;
+export default MutualFundsSection;
