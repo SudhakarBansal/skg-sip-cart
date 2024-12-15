@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
 import logoImg from "../assets/logo.png";
 import {
   FaFacebookF,
@@ -93,50 +94,44 @@ const Footer = () => {
 
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-                <p>
-                  <a href="/" className="text-reset">
-                    Product 1
-                  </a>
-                </p>
-                <p>
-                  <a href="/" className="text-reset">
-                  Product 2
-                  </a>
-                </p>
-                <p>
-                  <a href="/" className="text-reset">
-                  Product 3
-                  </a>
-                </p>
-                <p>
-                  <a href="/" className="text-reset">
-                  Product 4
-                  </a>
-                </p>
+                <p>Mutual Funds</p>
+                <p>Capital Market</p>
+                <p>Insurance</p>
+                <p>PMS</p>
+                <p>and More...</p>
               </MDBCol>
 
               <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                 <p>
-                  <a href="/" className="text-reset">
-                    {/* Pricing */}
+                  <Link to="/" className="text-reset">
                     Home
-                  </a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="/about" className="text-reset">
+                  <Link to="/about" className="text-reset">
                     About Us
-                  </a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="https://ewa.njindiaonline.com/ewa/login" target="_blank" rel="noreferrer" className="text-reset">
+                  <Link to="/product-basket" className="text-reset">
+                    Product Basket
+                  </Link>
+                </p>
+                <p>
+                  <a
+                    href="https://ewa.njindiaonline.com/ewa/login"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-reset"
+                  >
                     Login
                   </a>
                 </p>
                 <p>
-                  <a href="/contact" className="text-reset">
+                  <Link to="/contact" className="text-reset">
                     Contact Us
-                  </a>
+                  </Link>
                 </p>
               </MDBCol>
 
