@@ -19,7 +19,7 @@ const AboutPage = () => {
         <div className="mb-4 underline-div"></div>
         <div className="mx-5 mt-3 about-container-text">
           <p>
-            SKG SIP CART is a financial services firm with over 15 years of
+            SKG SIP CART is a financial services firm with over 16 years of
             experience, dedicated to delivering personalized and
             technology-driven solutions to our clients. Our team consists of
             highly skilled professionals, equipped with the knowledge and
@@ -78,6 +78,22 @@ const AboutPage = () => {
             is to cultivate a culture of growth, enthusiasm, and dedication,
             ensuring that we always go the extra mile for our clients.
           </p>
+
+          <div className="my-4">
+            <h2 className="text-center">Our Introduction</h2>
+            <div className="embed-responsive embed-responsive-16by9">
+              <iframe
+                className="embed-responsive-item"
+                src="https://www.youtube.com/embed/yADhZGx2Dg0"
+                title="MY FIRST VIDEO ABOUT MY CHANNEL WATCH AND SUBSCRIBE MY CHANNEL"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{ width: "100%", height: "400px", border: "none" }}
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
       <Achievements />

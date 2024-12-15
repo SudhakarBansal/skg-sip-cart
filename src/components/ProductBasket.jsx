@@ -1,44 +1,51 @@
-import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FaChartPie, FaBriefcase, FaDollarSign, FaBalanceScale, FaChartLine, FaUniversity } from 'react-icons/fa';
+import React from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import {
+  FaChartPie,
+  FaWallet,
+  FaShieldAlt,
+  FaBuilding,
+  FaBriefcase,
+  FaHome,
+} from "react-icons/fa";
 
 const ProductBasket = () => {
   const products = [
     {
-      title: 'Mutual Funds',
+      title: "Mutual Funds",
       description:
-        'Professionally managed investment funds pooling money from investors to purchase securities. These provide diversification, liquidity, and professional management.',
+        "Diversify your investment portfolio with professionally managed mutual funds. Benefit from expert management, liquidity, and reduced risk through a wide array of asset classes.",
       icon: <FaChartPie size={40} className="text-primary" />,
     },
     {
-      title: 'Equity Funds',
+      title: "Fixed Income",
       description:
-        'Collective investment schemes focusing on investments in various equity securities using private equity strategies.',
-      icon: <FaBriefcase size={40} className="text-success" />,
+        "Secure and stable income streams through a variety of fixed-income products, including NCDs, government bonds, and company deposits. Invest in reliable instruments that ensure steady returns.",
+      icon: <FaWallet size={40} className="text-success" />,
     },
     {
-      title: 'Debt Funds',
+      title: "Insurance",
       description:
-        'Investment pools focusing on fixed-income investments like bonds, offering consistent returns with lower risk.',
-      icon: <FaDollarSign size={40} className="text-warning" />,
+        "Protect your financial future with tailored insurance solutions. Our comprehensive risk management advisory services help safeguard you and your loved ones against uncertainties.",
+      icon: <FaShieldAlt size={40} className="text-warning" />,
     },
     {
-      title: 'Balanced Funds',
+      title: "Capital Market",
       description:
-        'Mutual funds containing a mix of stocks, bonds, and sometimes money market instruments to balance risk and return.',
-      icon: <FaBalanceScale size={40} className="text-info" />,
+        "Tap into the dynamic world of capital markets with easy access to stocks, ETFs, and other market instruments. Empower your investments with direct equity options and grow your wealth.",
+      icon: <FaBuilding size={40} className="text-info" />,
     },
     {
-      title: 'Small Cap Funds',
+      title: "Portfolio Management Services (PMS)",
       description:
-        'Investments in small-cap category stocks, excluding the largest 250 stocks, providing high-growth potential.',
-      icon: <FaChartLine size={40} className="text-danger" />,
+        "Achieve superior returns with our bespoke Portfolio Management Services (PMS). We provide personalized equity and mutual fund strategies designed to meet your financial objectives, exclusively available through us.",
+      icon: <FaBriefcase size={40} className="text-danger" />,
     },
     {
-      title: 'Large Cap Funds',
+      title: "Real Estate",
       description:
-        'Investments in the largest 100 stocks by market capitalization, offering stability and consistent returns.',
-      icon: <FaUniversity size={40} className="text-dark" />,
+        "Expand your investment portfolio with premium real estate opportunities. Gain access to exclusive properties that offer long-term value and potential for capital appreciation.",
+      icon: <FaHome size={40} className="text-dark" />,
     },
   ];
 
@@ -46,10 +53,9 @@ const ProductBasket = () => {
     <Container className="py-5 mt-5">
       <Row className="text-center mb-4">
         <Col>
-          <h2 style={{ fontWeight: '700' }}>Our Product Basket</h2>
+          <h2 style={{ fontWeight: "700" }}>Explore Our Product Portfolio</h2>
           <p>
-            Explore a variety of financial products designed to cater to your
-            diverse investment needs and goals.
+            Choose from a diverse range of high-quality financial products, each designed to align with your investment aspirations and risk tolerance.
           </p>
         </Col>
       </Row>
@@ -59,7 +65,7 @@ const ProductBasket = () => {
             <Card className="h-100 text-center border-1">
               <Card.Body>
                 <div className="mb-3">{product.icon}</div>
-                <Card.Title className="mb-2" style={{ fontWeight: '600' }}>
+                <Card.Title className="mb-2" style={{ fontWeight: "600" }}>
                   {product.title}
                 </Card.Title>
                 <Card.Text>{product.description}</Card.Text>
